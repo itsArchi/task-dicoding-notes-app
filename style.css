@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #2d3250;
+  color: #333;
+  padding: 16px;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+form {
+  margin-bottom: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+input,
+textarea {
+  display: block;
+  border: none;
+  width: 200%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fbf9f1;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #f6f5f2;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e5e1da;
+}
+
+#note-form {
+  display: grid;
+  justify-items: center;
+}
+
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.note-item {
+  background-color: #e5e1da;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  #note-form {
+    display: grid;
+    justify-items: center;
+  }
+
+  .note-list {
+    grid-template-columns: 1fr;
+  }
+
+  .note-item {
+    padding: 8px;
+  }
+}
