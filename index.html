@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <app-bar></app-bar>
     <div class="main-container">
       <div class="form-container">
-        <h1>Notes App</h1>
+        <h1>Add your note here</h1>
         <form id="note-form">
-          <input type="text" id="note-title" placeholder="Title" required />
-          <textarea id="note-body" placeholder="Body" required></textarea>
+          <custom-input type="text" id="note-title" placeholder="Title" required></custom-input>
+          <custom-input type="textarea" id="note-body" placeholder="Body" required></custom-input>
           <button type="submit">Add Note</button>
         </form>
       </div>
@@ -26,6 +27,8 @@
     </div>
     <script src="app.js"></script>
     <script src="note-item.js"></script>
+    <script src="app-bar.js"></script>
+    <script src="custom-input.js"></script>
   </body>
   <footer>
     <p> &copy; 2024 Notes App. Noer Rohim.</p>
