@@ -1,36 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notes App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <app-bar></app-bar>
-    <div class="main-container">
-      <div class="form-container">
-        <h1>Add your note here</h1>
-        <form id="note-form">
-          <custom-input type="text" id="note-title" placeholder="Title" required></custom-input>
-          <custom-input type="textarea" id="note-body" placeholder="Body" required></custom-input>
-          <button type="submit">Add Note</button>
-        </form>
-      </div>
-      <div class="note-list" id="note-list"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</head>
+<body>
+  <loading-indicator id="loading-indicator"></loading-indicator>
+  <app-bar></app-bar>
+  <div class="main-container">
+    <div class="form-container">
+      <h1>Add your note here</h1>
+      <form id="note-form">
+        <custom-input
+          type="text"
+          id="note-title"
+          placeholder="Title"
+          required
+        ></custom-input>
+        <custom-input
+          type="textarea"
+          id="note-body"
+          placeholder="Body"
+          required
+        ></custom-input>
+        <button type="submit">Add Note</button>
+      </form>
     </div>
-    <script src="app.js"></script>
-    <script src="note-item.js"></script>
-    <script src="app-bar.js"></script>
-    <script src="custom-input.js"></script>
-  </body>
-  <footer>
-    <p> &copy; 2024 Notes App. Noer Rohim.</p>
-  </footer>
+    <div class="note-list" id="note-list"></div>
+  </div>
+  <script type="module" src="app.js"></script>
+  <script type="module" src="note-item.js"></script>
+  <script type="module" src="app-bar.js"></script>
+  <script type="module" src="custom-input.js"></script>
+</body>
+<footer>
+  <p>&copy; 2024 Notes App. Noer Rohim.</p>
+</footer>
 </html>

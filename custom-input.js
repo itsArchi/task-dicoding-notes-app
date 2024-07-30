@@ -10,14 +10,14 @@ class CustomInput extends HTMLElement {
 
   get value() {
     const element = this.shadowRoot.querySelector(
-      this.getAttribute("type") === "textarea" ? "textarea" : "input"
+      this.getAttribute("type") === "textarea" ? "textarea" : "input",
     );
     return element ? element.value : "";
   }
 
   set value(val) {
     const element = this.shadowRoot.querySelector(
-      this.getAttribute("type") === "textarea" ? "textarea" : "input"
+      this.getAttribute("type") === "textarea" ? "textarea" : "input",
     );
     if (element) {
       element.value = val;
